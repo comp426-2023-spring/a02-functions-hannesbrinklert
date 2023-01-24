@@ -1,0 +1,28 @@
+{
+  "name": "cmd-line-package",
+  "version": "1.0.0",
+  "description": "First command line package",
+  "type": "module",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a02-functions-hannesbrinklert.git"
+  },
+  "author": "Hannes Brinklert",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a02-functions-hannesbrinklert/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a02-functions-hannesbrinklert#readme",
+  "dependencies": {
+    "minimist": "^1.2.7",
+    "moment-timezone": "^0.5.40",
+    "node-fetch": "^3.3.0"
+  },
+  "main": "cli.js",
+  "bin": {
+    "galosh.js": "./cli.js"
+  }
+}
