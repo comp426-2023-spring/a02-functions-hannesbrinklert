@@ -24,11 +24,12 @@ const timezone = args.z || moment.tz.guess();
 const lat = Math.abs(args.n) || -1 * Math.abs(args.s)
 
 const lon = Math.abs(args.e) || -1 * Math.abs(args.w)
-
+/*
 if (isNaN(lat) && isNaN(lon)) {
     console.error("Missing parameters");
     process.exit(1);
-} else if (Math.abs(lat) > 180) {
+} else */
+if (Math.abs(lat) > 90) {
     console.log("Latitud must be in range");
     process.exit(1);
 } else if (Math.abs(lon) > 180) {
@@ -40,14 +41,14 @@ const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${
 
 const data = await response.json();
 
+/*
 if (isNaN(lat) && isNaN(lon) && args.j) {
     console.error();
     process.exit(1);
-}
+} */
 
 if (args.j) {
     console.log(data);
-    process.exit(0);
 }
 
 const days = args.d || 1;
