@@ -21,9 +21,9 @@ if (args.h) {
 
 const timezone = args.t || moment.tz.guess();
 
-const lat = args.n || args.s
+const lat = args.n || -1 * args.s
 
-const lon = args.e || args.w
+const lon = args.e || -1 * args.w
 /*
 if (isNaN(lat) && isNaN(lon)) {
     console.error("Missing parameters");
