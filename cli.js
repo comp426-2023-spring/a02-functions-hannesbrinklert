@@ -43,7 +43,7 @@ if (isNaN(lat) && isNaN(lon) && args.j) {
     process.exit(1);
 }
 
-const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat.toFixed(2)}&longitude=${lon.toFixed(2)}&daily=precipitation_hours&timezone=${timezone}`);
+const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon.toFixed(2) + "&daily=precipitation_hours&timezone=" + timezone);
 
 const data = await response.json();
 
