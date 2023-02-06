@@ -38,10 +38,10 @@ if (Math.abs(lat) > 90) {
     process.exit(1);
 } */
 
-if (isNaN(lat) && isNaN(lon) && args.j) {
+/*if (isNaN(lat) && isNaN(lon) && args.j) {
     console.error();
     process.exit(1);
-}
+} */
 
 const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon.toFixed(2) + "&daily=precipitation_hours&timezone=" + timezone);
 
@@ -53,7 +53,7 @@ if (args.j) {
     process.exit(0);
 }
 //test
-const days = args.d || 1;
+const days = args.d;
 
 let str = "";
 
